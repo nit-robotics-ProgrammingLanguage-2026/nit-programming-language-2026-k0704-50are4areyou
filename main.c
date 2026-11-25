@@ -1,19 +1,19 @@
 #include <stdio.h>
 
-int f(int x){
-    static int s = 0;
-    s += x;
-    return s;
+int calculation(int value){
+    static int sum = 0;
+    sum += value;
+    return sum;
 }
 int main(void){
-    int n, a = 0;
-    scanf("%d", &n);
-    if (n < 1 || n > 10){
+    int input, a = 0;
+    scanf("%d", &input);
+    if (input < 1 || input > 10){
         printf("NG");
         return 0;
     }
-     for (int i = 1; i <= n; i++){
-        a = f(i * 2);
+     for (int i = 1; i <= input; i++){
+        a = calculation(i * 2);
     } 
     printf("%d", a);
 
